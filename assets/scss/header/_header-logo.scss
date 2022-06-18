@@ -1,0 +1,15 @@
+@use "../skin";
+@use "../mixins-media";
+@use "../variables";
+
+header-logo {
+  display: flex;
+  flex-direction: column;
+  &__image {
+    display: block;
+    @include sm-min {
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+  }
+}

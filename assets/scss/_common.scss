@@ -1,0 +1,8 @@
+@use "skin";
+@use "mixins-media";
+@use "variables";
+
+.body {
+  background-image: url(../img/global-bg.jpg);
+  z-index: -2;
+}

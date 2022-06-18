@@ -1,0 +1,14 @@
+@use "../skin";
+@use "../mixins-media";
+@use "../variables";
+
+.header {
+  overflow: hidden;
+  min-height: 100px;
+  margin-bottom: 30px;
+  border-radius: 0 0 7px 7px;
+  background: rgba($color-dark, 0.5);
+  @include sm-min {
+    padding: 45px 15px;
+  }
+}
