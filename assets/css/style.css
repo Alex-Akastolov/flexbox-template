@@ -323,9 +323,26 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.body {
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+body {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
   background-image: url(../img/global-bg.jpg);
-  z-index: -2;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 1;
+}
+
+a {
+  color: #eeeeee;
+  text-decoration: none;
 }
 
 /* xl */
@@ -348,7 +365,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-header-logo {
+.header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,9 +373,26 @@ header-logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-header-logo__image {
+.header-logo__image {
   display: block;
+}
+.header-logo__title {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #eeeeee;
+  font-family: "Lora", serif;
+  font-weight: 300;
+}
+.header-logo__description {
+  display: block;
+  text-align: center;
+  color: #eeeeee;
 }
 
 /* xl */
@@ -367,12 +401,74 @@ header-logo__image {
 /* sm */
 /* xs */
 /* xx */
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-menu__list-item a {
+  display: block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+.header-menu__list-item a:hover,
+.header-menu__list-item a :focus {
+  color: #e12727;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+}
+
+.active a {
+  color: #e12727;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+}
+
 @media (min-width: 768px) {
-  .header {
-    padding: 45px 15px;
-  }
-  header-logo__image {
+  .header-logo__image {
     max-width: 400px;
     margin-bottom: 30px;
+  }
+  .header-logo__title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .header-logo__description {
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+  }
+  .header-logo {
+    padding: 45px 15px;
+  }
+  .header-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 1199.8px) {
+  body {
+    padding: 0 15px;
   }
 }

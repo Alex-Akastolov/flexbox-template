@@ -2,7 +2,30 @@
 @use "mixins-media";
 @use "variables";
 
-.body {
+html {
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.5rem;
+}
+
+body {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
   background-image: url(../img/global-bg.jpg);
-  z-index: -2;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 1;
+  @include lg-min {
+    padding: 0 30px;
+  }
+  @include lg {
+    padding: 0 15px;
+  }
+}
+
+a {
+  color: $color-light;
+  text-decoration: none;
 }
