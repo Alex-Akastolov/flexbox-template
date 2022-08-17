@@ -26,7 +26,7 @@
     }
     &-item {
       &:last-child {
-        @include xs {
+        @include sm {
           margin-bottom: 5px;
         }
       }

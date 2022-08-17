@@ -925,6 +925,10 @@ p {
         -ms-flex-order: 1;
             order: 1;
   }
+  .footer-top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 991.8px) and (min-width: 576px) {
@@ -962,6 +966,9 @@ p {
             justify-content: center;
     width: 100%;
     text-align: center;
+  }
+  .header-menu__list-item:last-child {
+    margin-bottom: 5px;
   }
   .header-menu__list-item a {
     margin-top: 0;
@@ -1003,9 +1010,6 @@ p {
   .header-logo__title {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-  .header-menu__list-item:last-child {
-    margin-bottom: 5px;
   }
   .main-content-item {
     -webkit-box-flex: 0;

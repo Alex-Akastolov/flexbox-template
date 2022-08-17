@@ -17,6 +17,9 @@
         width: 100%;
       }
     }
+    @include md {
+      flex-wrap: wrap;
+    }
   }
   &-bottom {
     text-align: center;
