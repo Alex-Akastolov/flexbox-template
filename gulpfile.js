@@ -74,7 +74,7 @@ function watchDevFiles() {
   watch(PATH.scssFiles, series(scssDev));
   watch(PATH.htmlFiles, sync);
   watch(PATH.jsFiles, sync);
-  // watch(PATH.cssFiles, sync);
+  watch(PATH.cssFiles, sync);
 }
 
 task('comb', series(comb));

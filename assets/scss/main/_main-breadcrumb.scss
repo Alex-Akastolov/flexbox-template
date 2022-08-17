@@ -1,0 +1,31 @@
+.main-breadcrumb {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 8px 12px;
+  text-align: right;
+  letter-spacing: 2px;
+  border-radius: 7px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  & span {
+    position: relative;
+    margin-right: 1.5px;
+    color: $color-gray;
+    &:last-child {
+      margin-right: 7px;
+    }
+  }
+  & a {
+    font-weight: bold;
+    &:hover {
+      text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
+    }
+  }
+  & i {
+    color: $color-gray;
+    font-weight: bold;
+  }
+}

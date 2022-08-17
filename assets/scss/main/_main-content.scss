@@ -1,0 +1,38 @@
+.main-content {
+  &__title {
+    margin: 30px 0;
+    padding: 8px 12px;
+    letter-spacing: 3px;
+    color: $color-light;
+    border-radius: 7px;
+    font-family: $font-header;
+    font-weight: 300;
+    line-height: 1.5em;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.5) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    @include sm-min {
+      flex: 0 0 33.3333%;
+      font-size: 2rem;
+    }
+    @include sm-xx {
+      flex: 0 0 50%;
+      font-size: 1.5rem;
+    }
+    @include xx {
+      flex: 0 0 100%;
+      font-size: 1rem;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -7.5px;
+    margin-right: -7.5px;
+    margin-bottom: 30px;
+    margin-left: -7.5px;
+  }
+}

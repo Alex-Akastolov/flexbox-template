@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgba($color-dark, 0.3);
+  background: rgba($color-dark, 0.3);
   &__list {
     list-style: none;
     margin: 0;
@@ -14,7 +14,29 @@
     @include sm-min {
       display: flex;
     }
+    @include sm {
+      display: none;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
     &-item {
+      &:last-child {
+        @include xs {
+          margin-bottom: 5px;
+        }
+      }
+      &.active {
+        & a {
+          color: $color-accent-dark;
+          background: rgba($color-dark, 0.4);
+          text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
+        }
+      }
       a {
         display: block;
         margin: 5px;
@@ -26,15 +48,50 @@
           background-color: rgba($color-dark, 0.3);
           text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
         }
+        @include sm {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
       }
+    }
+  }
+  &__btn {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: rgba($color-dark, 0.2);
+    &-row {
+      position: relative;
+      width: 60%;
+      height: 2px;
+      margin: 2px 0;
+      transition: 0.5s;
+      background-color: $color-light;
+    }
+    @include sm-min {
+      display: none;
+    }
+    @include sm {
+      display: flex;
     }
   }
 }
 
 .active {
-  a {
-    color: $color-accent;
-    background-color: rgba($color-dark, 0.4);
-    text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
+  .header-menu__btn-row {
+    &:first-child {
+      top: 6px;
+      transform: rotate(-135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:last-child {
+      top: -6px;
+      transform: rotate(-225deg);
+    }
   }
 }

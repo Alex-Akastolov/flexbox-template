@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
@@ -16,6 +17,7 @@ body {
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
+  transition: opacity 1s ease 0s;
   opacity: 1;
   @include lg-min {
     padding: 0 30px;
@@ -28,4 +30,25 @@ body {
 a {
   color: $color-light;
   text-decoration: none;
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+p {
+  color: $color-gray;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  @include lg {
+    flex-wrap: wrap;
+  }
 }
