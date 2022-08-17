@@ -52,10 +52,10 @@
   @include sm-min {
     flex: 0 0 33.3333%;
   }
-  @include sm-xs {
+  @include sm-xx {
     flex: 0 0 50%;
   }
-  @include xs {
+  @include xx {
     flex: 0 0 100%;
   }
 }
